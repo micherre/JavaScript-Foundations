@@ -78,8 +78,8 @@ Hint: To drop an interest rate by 5% you can take monthlyRate and multiply it by
 
 function mortgageCalculator(principal, interest, years, creditScore) {
     let monthlyInterestRate = interest/12;
-    let monthlyRate = (principal * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, periods)) / (Math.pow( 1 + monthlyInterestRate, periods) -1 ));
     let periods = years * 12;
+    let monthlyRate = (principal * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, periods)) / (Math.pow( 1 + monthlyInterestRate, periods) -1 ));
     if(creditScore >= 740){
         monthlyRate = monthlyRate * 0.95;
     }
